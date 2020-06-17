@@ -1,60 +1,45 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
+    <!-- Navbar -->
+    <Navbar />
+    <!-- Main content -->
+    <v-content id="content">
+      <v-col cols="12" sm="6" md="3">
+        <!-- Issue Search Field -->
+        <v-text-field
+          label="Search Issues"
+          id="search-bar"
+          filled
+          rounded
+          @click:append="issueSearch"
+          append-icon="mdi-comment-search-outline"
+        ></v-text-field>
+      </v-col>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
+import Navbar from "@/components/Navbar";
 export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
+  name: "App",
+  components: { Navbar },
   data: () => ({
     //
   }),
+  methods: {
+    issueSearch() {
+      alert("Searched Issues!");
+    }
+  }
 };
 </script>
+
+<style lang="sass">
+#content
+  background-color: #E5E5E5
+#search-bar
+  color: #787878
+  border-bottom-color: rgba(0,0,0,0)
+  border-bottom-width: 0
+</style>
