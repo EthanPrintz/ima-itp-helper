@@ -18,7 +18,13 @@
             </v-btn>
           </div>
           <!-- Issue Search Field -->
-          <v-text-field label="Search Issues" id="search-bar" filled rounded color="#787878">
+          <v-text-field
+            label="Search Issues"
+            id="search-bar"
+            filled
+            rounded
+            color="#787878"
+          >
             <template v-slot:append>
               <v-btn right icon @click="issueSearch">
                 <v-icon>mdi-comment-search-outline</v-icon>
@@ -48,21 +54,21 @@
 
 <script>
 // Imports
-import Navbar from "@/components/Navbar";
-import IssueCard from "@/components/IssueCard";
+import Navbar from '@/components/Navbar';
+import IssueCard from '@/components/IssueCard';
 
 // Export data to template
 export default {
-  name: "App",
+  name: 'App',
   components: { Navbar, IssueCard },
   data: () => ({
     //
   }),
   methods: {
     issueSearch() {
-      alert("Searched Issues!");
-    }
-  }
+      alert('Searched Issues!');
+    },
+  },
 };
 </script>
 
@@ -99,7 +105,4 @@ export default {
 .v-input__append-inner
   margin-top: 0!important
   align-self: center!important
-
-#lower-fold
-  .lower-fold-col
 </style>
