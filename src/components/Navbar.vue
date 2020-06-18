@@ -26,10 +26,10 @@
 export default {};
 </script>
 
-<style lang="sass">
+<style scoped lang="sass">
 #title
   color: #DADADA
-  background-color: #A9A9A9
+  background-color: #66129D
   font-weight: 900
   padding: 0 6px
   letter-spacing: 0.15rem
