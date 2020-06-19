@@ -52,7 +52,7 @@ export default {
     margin-top: -1rem
     font-weight: 800
     line-height: 1.4rem
-    width: 70%
+    width: 80%
   #comments
     position: absolute
     bottom: 1rem
