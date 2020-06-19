@@ -29,11 +29,15 @@ export default {};
 <style scoped lang="sass">
 #title
   color: #DADADA
-  background-color: #66129D
+  background-color: #A9A9A9
   font-weight: 900
   padding: 0 6px
   letter-spacing: 0.15rem
   font-size: 1.6rem
+  transition: 0.1s
+  cursor: pointer
+#title:hover
+    background-color: #66129D
 
 #app-bar
   border-bottom: 0.3rem solid #DADADA
